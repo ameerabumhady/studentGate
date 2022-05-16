@@ -1,0 +1,63 @@
+CREATE TABLE users(
+user_id int(11) AUTO_INCREMENT PRIMARY KEY,
+username varchar(50) not null UNIQUE,
+password varchar(250) not null
+);
+
+CREATE TABLE Students(
+std_id int(11) AUTO_INCREMENT PRIMARY KEY,
+first_name varchar(50) not null,
+last_name varchar(50) not null,
+email varchar(150) not null UNIQUE,
+phone_num varchar(15)
+);
+
+ALTER table Students 
+add college_id int(11) not null,
+add FOREIGN KEY (college_id) REFERENCES College(college_id);
+
+// INSERT INTO Students ( first_name, last_name, email, phone_num, college_id) VALUES ("ahmed", "ahmed", "ahmed@gmail.com", "0591111111", 1);
+// INSERT INTO Students ( first_name, last_name, email, phone_num, college_id) VALUES ("mohamed", "mohamed", "mohamed@gmail.com", "0592222222", 2);
+// INSERT INTO Students ( first_name, last_name, email, phone_num, college_id) VALUES ("anas", "anas", "anas@gmail.com", "0593333333", 1);
+
+-------------
+CREATE TABLE College(
+college_id int(11) AUTO_INCREMENT PRIMARY KEY,
+name varchar(50) not null UNIQUE
+);
+
+// INSERT INTO college ( name) VALUES ("College of Engineering")
+// INSERT INTO college ( name) VALUES ("information technology collage")
+
+CREATE TABLE Courses(
+course_id int(11) AUTO_INCREMENT PRIMARY KEY,
+name varchar(150) not null UNIQUE,
+college_id int(11) not null,
+FOREIGN KEY (college_id) REFERENCES College(college_id) 
+);
+
+// INSERT INTO courses ( name, college_id) VALUES ("Programming 1", 2)
+// INSERT INTO courses ( name, college_id) VALUES ("Networking 1", 1)
+// INSERT INTO courses ( name, college_id) VALUES ("Programming 2", 2)
+// INSERT INTO courses ( name, college_id) VALUES ("Networking 2", 1)
+// INSERT INTO courses ( name, college_id) VALUES ("DataStructure", 2)
+// INSERT INTO courses ( name, college_id) VALUES ("Operating System", 1)
+
+CREATE TABLE StudentsCourse(
+std_id int(11) not null,
+course_id int(11) not null,
+grade decimal(3,1)
+);
+
+ALTER table StudentsCourse 
+add FOREIGN KEY (std_id) REFERENCES Students(std_id),
+add FOREIGN KEY (course_id) REFERENCES Courses(course_id),
+add PRIMARY KEY(std_id, course_id) ;
+
+
+// INSERT INTO StudentsCourse (std_id, course_id, grade) VALUES (1, 2, 80);
+INSERT INTO StudentsCourse (std_id, course_id, grade) VALUES (1, 4, 85);
+INSERT INTO StudentsCourse (std_id, course_id, grade) VALUES (1, 6, 70);
+INSERT INTO StudentsCourse (std_id, course_id, grade) VALUES (2, 1, 80);
+INSERT INTO StudentsCourse (std_id, course_id, grade) VALUES (2, 3, 85);
+

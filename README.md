@@ -7,21 +7,21 @@ studentGate is course project in the University
 # * College 
 
 ## Add Colleg
-<img src="/images/Add College.png"/>
+<img src="/images/AddCollege.png"/>
 
 ## Display All Colleges with there courses
-<img src="/images/displayCollege.png"/>
+<img src="/images/displayColleges.png"/>
 
 # * Student
 
 ## Add Student
-<img src="/images/Add Stubent.png"/>
+<img src="/images/AddStudent.png"/>
 
 ## Display Students
 <img src="/images/displayStudents.png"/>
 
 ## Semester Registration
-<img src="/images/Semester Registration.png"/>
+<img src="/images/SemesterRegistration.png"/>
 
 ## Display All Student Marks
 <img src="/images/Grades.png"/>
@@ -29,13 +29,13 @@ studentGate is course project in the University
 # * Course
 
 ## Add Course
-<img src="/images/add Course.png"/>
+<img src="/images/AddCourse.png"/>
 
 ## Display all Courses
-<img src="/images/home.png"/>
+<img src="/images/homePage.png"/>
 
 ## Display Courses related the specific College
-<img src="/images/College.png"/>
+<img src="/images/coursesByCollege.png"/>
 
 # * Log In & Log Out
 

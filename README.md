@@ -1,6 +1,6 @@
 # studentGate
-studentGate is course project in the University 
-
+## studentGate is Course Project in the University 
+### It was programmed and developed using PHP, MySQL, HTML, CSS, and BootStrap.
 # Home Dashbord
 <img src="/images/homePage.png"/>
 
